@@ -28,3 +28,11 @@ document
   .addEventListener('click', () => {
     store.dispatch({type: 'DEC'});
   });
+
+  const update = () => {
+    document
+      .getElementById('counter')
+      .innerHTML = store.getState();
+  }
+
+  store.subscribe(update);
